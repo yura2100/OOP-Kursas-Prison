@@ -1,0 +1,14 @@
+C:\Users\User\Desktop\Курсач\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+C:\Users\User\Desktop\Курсач\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\User\Desktop\Курсач\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\User\Desktop\Курсач\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Курсач\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\User\Desktop\Курсач\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\User\Desktop\Курсач\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\User\Desktop\Курсач\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\User\Desktop\Курсач\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\User\Desktop\Курсач\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Forms.Main.resources
+C:\Users\User\Desktop\Курсач\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Forms.Statistics.resources
+C:\Users\User\Desktop\Курсач\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Forms.Login.resources
+C:\Users\User\Desktop\Курсач\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Forms.Menu.resources
+C:\Users\User\Desktop\Курсач\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Forms.MainLord.resources
