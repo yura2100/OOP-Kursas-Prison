@@ -19,9 +19,9 @@ namespace WindowsFormsApp1.Forms
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Main main = new Main();
-            main.Show();
             this.Hide();
+            Global.Main = new Main();
+            Global.Main.Show();
             Global.Prison.Load();
             // Prisoner p = new Prisoner("Ivan", "Ivanov", "Ivanovich", 1900, 12, 1, 1);
             // p.State = new State("123", 2018, 12, 11, 20, 11, 0);
@@ -38,11 +38,11 @@ namespace WindowsFormsApp1.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (this.textBox1.Text == "12345678")
+            if (this.textBox1.Text == "1")
             {
-                MainLord main = new MainLord();
-                main.Show();
                 this.Hide();
+                Global.Main = new MainLord();
+                Global.Main.Show();
                 Global.Prison.Load();
             }
             else

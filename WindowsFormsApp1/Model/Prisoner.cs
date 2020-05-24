@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace WindowsFormsApp1
+namespace WindowsFormsApp1.Model
 {
     [Serializable]
     public class Prisoner : Person
     {
         public int ID { get; set; }
+        public DateTime BirthDate { get; set; }
+        public int Age => (int)((DateTime.Today - BirthDate).TotalDays / 365.2425);
         public List<Relative> Relatives;
         public List<string> Character;
         public State State;
@@ -14,8 +16,8 @@ namespace WindowsFormsApp1
         
         public Prisoner(){}
         
-        public Prisoner(string name, string surname, string patronymic, int year, int month, int day, int id) :
-            base(name, surname, patronymic, year, month, day)
+        public Prisoner(string name, string surname, string patronymic, int id) :
+            base(name, surname, patronymic)
         {
             ID = id;
             Relatives = new List<Relative>();

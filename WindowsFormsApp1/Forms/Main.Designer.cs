@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Windows.Forms;
+using WindowsFormsApp1.Forms.CustomElements;
 
 namespace WindowsFormsApp1.Forms
 {
@@ -36,15 +37,15 @@ namespace WindowsFormsApp1.Forms
             this.panel1 = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new WindowsFormsApp1.Forms.TextBoxWithPlaceholder();
+            this.textBox1 = new WindowsFormsApp1.Forms.CustomElements.TextBoxWithPlaceholder();
             this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
             this.listView1 = new System.Windows.Forms.ListView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.listView3 = new System.Windows.Forms.ListView();
+            this.listViewCharacter = new System.Windows.Forms.ListView();
             this.columnHeader7 = new System.Windows.Forms.ColumnHeader();
             this.label22 = new System.Windows.Forms.Label();
-            this.listView2 = new System.Windows.Forms.ListView();
+            this.listViewRelatives = new System.Windows.Forms.ListView();
             this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader5 = new System.Windows.Forms.ColumnHeader();
@@ -118,7 +119,7 @@ namespace WindowsFormsApp1.Forms
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
             this.button1.Location = new System.Drawing.Point(550, 6);
@@ -170,9 +171,9 @@ namespace WindowsFormsApp1.Forms
             // panel2
             // 
             this.panel2.AutoScroll = true;
-            this.panel2.Controls.Add(this.listView3);
+            this.panel2.Controls.Add(this.listViewCharacter);
             this.panel2.Controls.Add(this.label22);
-            this.panel2.Controls.Add(this.listView2);
+            this.panel2.Controls.Add(this.listViewRelatives);
             this.panel2.Controls.Add(this.label21);
             this.panel2.Controls.Add(this.textBoxStateText);
             this.panel2.Controls.Add(this.label20);
@@ -215,21 +216,21 @@ namespace WindowsFormsApp1.Forms
             this.panel2.Size = new System.Drawing.Size(538, 376);
             this.panel2.TabIndex = 5;
             // 
-            // listView3
+            // listViewCharacter
             // 
-            this.listView3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listView3.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {this.columnHeader7});
-            this.listView3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
-            this.listView3.FullRowSelect = true;
-            this.listView3.GridLines = true;
-            this.listView3.HideSelection = false;
-            this.listView3.Location = new System.Drawing.Point(159, 568);
-            this.listView3.MultiSelect = false;
-            this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(194, 135);
-            this.listView3.TabIndex = 65;
-            this.listView3.UseCompatibleStateImageBehavior = false;
-            this.listView3.View = System.Windows.Forms.View.Details;
+            this.listViewCharacter.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listViewCharacter.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {this.columnHeader7});
+            this.listViewCharacter.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.listViewCharacter.FullRowSelect = true;
+            this.listViewCharacter.GridLines = true;
+            this.listViewCharacter.HideSelection = false;
+            this.listViewCharacter.Location = new System.Drawing.Point(159, 568);
+            this.listViewCharacter.MultiSelect = false;
+            this.listViewCharacter.Name = "listViewCharacter";
+            this.listViewCharacter.Size = new System.Drawing.Size(194, 135);
+            this.listViewCharacter.TabIndex = 65;
+            this.listViewCharacter.UseCompatibleStateImageBehavior = false;
+            this.listViewCharacter.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader7
             // 
@@ -246,21 +247,21 @@ namespace WindowsFormsApp1.Forms
             this.label22.TabIndex = 64;
             this.label22.Text = "Особлива інформація:\r\n";
             // 
-            // listView2
+            // listViewRelatives
             // 
-            this.listView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {this.columnHeader3, this.columnHeader4, this.columnHeader5, this.columnHeader6});
-            this.listView2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
-            this.listView2.FullRowSelect = true;
-            this.listView2.GridLines = true;
-            this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(49, 407);
-            this.listView2.MultiSelect = false;
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(439, 108);
-            this.listView2.TabIndex = 63;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.View = System.Windows.Forms.View.Details;
+            this.listViewRelatives.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listViewRelatives.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {this.columnHeader3, this.columnHeader4, this.columnHeader5, this.columnHeader6});
+            this.listViewRelatives.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.listViewRelatives.FullRowSelect = true;
+            this.listViewRelatives.GridLines = true;
+            this.listViewRelatives.HideSelection = false;
+            this.listViewRelatives.Location = new System.Drawing.Point(49, 407);
+            this.listViewRelatives.MultiSelect = false;
+            this.listViewRelatives.Name = "listViewRelatives";
+            this.listViewRelatives.Size = new System.Drawing.Size(439, 108);
+            this.listViewRelatives.TabIndex = 63;
+            this.listViewRelatives.UseCompatibleStateImageBehavior = false;
+            this.listViewRelatives.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader3
             // 
@@ -270,13 +271,11 @@ namespace WindowsFormsApp1.Forms
             // columnHeader4
             // 
             this.columnHeader4.Text = "Прізвище";
-            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader4.Width = 121;
             // 
             // columnHeader5
             // 
             this.columnHeader5.Text = "По-батькові";
-            this.columnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader5.Width = 124;
             // 
             // columnHeader6
@@ -727,11 +726,11 @@ namespace WindowsFormsApp1.Forms
         protected System.Windows.Forms.Label label8;
         protected System.Windows.Forms.Label label9;
         protected System.Windows.Forms.ListView listView1;
-        protected System.Windows.Forms.ListView listView2;
-        protected System.Windows.Forms.ListView listView3;
+        protected System.Windows.Forms.ListView listViewCharacter;
+        protected System.Windows.Forms.ListView listViewRelatives;
         protected System.Windows.Forms.Panel panel1;
         protected System.Windows.Forms.Panel panel2;
-        private WindowsFormsApp1.Forms.TextBoxWithPlaceholder textBox1;
+        private WindowsFormsApp1.Forms.CustomElements.TextBoxWithPlaceholder textBox1;
         protected System.Windows.Forms.TextBox textBoxAge;
         protected System.Windows.Forms.TextBox textBoxBirth;
         protected System.Windows.Forms.TextBox textBoxDays;

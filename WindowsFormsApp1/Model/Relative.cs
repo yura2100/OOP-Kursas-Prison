@@ -1,14 +1,14 @@
 ﻿using System;
 
-namespace WindowsFormsApp1
+namespace WindowsFormsApp1.Model
 {
     [Serializable]
     public class Relative : Person
     {
         public string Relation { get; set; }
 
-        public Relative(string name, string surname, string patronymic, string relation, int year, int month, int day) : 
-            base(name, surname, patronymic, year, month, day)
+        public Relative(string name, string surname, string patronymic, string relation) : 
+            base(name, surname, patronymic)
         {
             Relation = relation;
         }

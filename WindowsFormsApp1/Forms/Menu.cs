@@ -5,9 +5,15 @@ namespace WindowsFormsApp1.Forms
 {
     public partial class Menu : Form
     {
-        public Menu()
+        protected Menu()
         {
             InitializeComponent();
+        }
+        
+        
+        private void Menu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Global.Prison.Save();
         }
 
         private void Menu_FormClosed(object sender, FormClosedEventArgs e)
@@ -17,16 +23,14 @@ namespace WindowsFormsApp1.Forms
 
         private void MainToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Main f = new Main();
-            f.Show();
             this.Hide();
+            Global.Main.Show();
         }
 
         private void StatisticsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Statistics f = new Statistics();
-            f.Show();
             this.Hide();
+            Global.Statistics.Show();
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace WindowsFormsApp1
+namespace WindowsFormsApp1.Model
 {
     [Serializable]
     public class Room

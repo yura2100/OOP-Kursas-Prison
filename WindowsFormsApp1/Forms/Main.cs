@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using WindowsFormsApp1.Model;
 
 namespace WindowsFormsApp1.Forms
 {
@@ -16,7 +17,7 @@ namespace WindowsFormsApp1.Forms
             try
             {
                 string input = textBox1.Text;
-                List<Prisoner> result = Global.Prison.Prisoners;;
+                List<Prisoner> result = Global.Prison.Prisoners;
                 if (input != "Пошук")
                 {
                     switch (comboBox1.SelectedIndex)
@@ -36,12 +37,7 @@ namespace WindowsFormsApp1.Forms
                     }
                 }
 
-                foreach (var item in listView1.Items)
-                {
-                    listView1.Items.Remove((ListViewItem)item);
-                }
-                
-                ShowListView(result);
+                UpdateListView(result);
                 listView1.Focus();
             }
             catch (ArgumentException)
@@ -52,11 +48,16 @@ namespace WindowsFormsApp1.Forms
 
         private void Main_Shown(object sender, EventArgs e)
         {
-            ShowListView(Global.Prison.Prisoners);
+            UpdateListView(Global.Prison.Prisoners);
         }
 
-        private void ShowListView(List<Prisoner> list)
+        protected void UpdateListView(List<Prisoner> list)
         {
+            foreach (var item in listView1.Items)
+            {
+                listView1.Items.Remove((ListViewItem)item);
+            }
+            
             foreach (var item in list)
             {
                 ListViewItem lvi = new ListViewItem(item.ID.ToString());
@@ -66,7 +67,40 @@ namespace WindowsFormsApp1.Forms
             }
         }
         
-        private void listView1_MouseClick(object sender, MouseEventArgs e)
+        public void UpdateRelativesList(Prisoner prisoner)
+        {
+            foreach (var item in listViewRelatives.Items)
+            {
+                listViewRelatives.Items.Remove((ListViewItem)item);
+            }
+            
+            foreach (var relative in prisoner.Relatives)
+            {
+                ListViewItem lvi = new ListViewItem(relative.Name);
+                lvi.SubItems.Add(relative.Surname);
+                lvi.SubItems.Add(relative.Patronymic);
+                lvi.SubItems.Add(relative.Relation);
+                lvi.Tag = relative;
+                listViewRelatives.Items.Add(lvi);
+            }
+        }
+
+        public void UpdateCharacterList(Prisoner prisoner)
+        {
+            foreach (var item in listViewCharacter.Items)
+            {
+                listViewCharacter.Items.Remove((ListViewItem)item);
+            }
+            
+            foreach (var character in prisoner.Character)
+            {
+                ListViewItem lvi = new ListViewItem(character);
+                lvi.Tag = character;
+                listViewCharacter.Items.Add(lvi);
+            }
+        }
+        
+        protected virtual void listView1_MouseClick(object sender, MouseEventArgs e)
         {
             Prisoner prisoner = (Prisoner) listView1.SelectedItems[0].Tag;
             textBoxName.Text = prisoner.Name;
@@ -85,22 +119,8 @@ namespace WindowsFormsApp1.Forms
             textBoxMonths.Text = prisoner.State.Length.Months.ToString();
             textBoxDays.Text = prisoner.State.Length.Days.ToString();
             textBoxStateText.Text = prisoner.State.Text;
-
-            foreach (var relative in prisoner.Relatives)
-            {
-                ListViewItem lvi = new ListViewItem(relative.Name);
-                lvi.SubItems.Add(relative.Surname);
-                lvi.SubItems.Add(relative.Patronymic);
-                lvi.SubItems.Add(relative.Relation);
-                lvi.Tag = relative;
-                listView2.Items.Add(lvi);
-            }
-
-            foreach (var character in prisoner.Character)
-            {
-                ListViewItem lvi = new ListViewItem(character);
-                listView2.Items.Add(lvi);
-            }
+            UpdateRelativesList(prisoner);
+            UpdateCharacterList(prisoner);
         }
     }
 }

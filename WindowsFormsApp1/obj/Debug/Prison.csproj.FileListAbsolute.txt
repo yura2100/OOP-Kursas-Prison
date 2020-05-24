@@ -1,0 +1,14 @@
+C:\Users\User\Desktop\OOP-Kursas-Prison\Prison\bin\Debug\Prison.exe.config
+C:\Users\User\Desktop\OOP-Kursas-Prison\Prison\bin\Debug\Prison.exe
+C:\Users\User\Desktop\OOP-Kursas-Prison\Prison\bin\Debug\Prison.pdb
+C:\Users\User\Desktop\OOP-Kursas-Prison\Prison\obj\Debug\Prison.csprojAssemblyReference.cache
+C:\Users\User\Desktop\OOP-Kursas-Prison\Prison\obj\Debug\WindowsFormsApp1.Forms.Login.resources
+C:\Users\User\Desktop\OOP-Kursas-Prison\Prison\obj\Debug\WindowsFormsApp1.Forms.Main.resources
+C:\Users\User\Desktop\OOP-Kursas-Prison\Prison\obj\Debug\WindowsFormsApp1.Forms.MainLord.resources
+C:\Users\User\Desktop\OOP-Kursas-Prison\Prison\obj\Debug\WindowsFormsApp1.Forms.Menu.resources
+C:\Users\User\Desktop\OOP-Kursas-Prison\Prison\obj\Debug\WindowsFormsApp1.Forms.Statistics.resources
+C:\Users\User\Desktop\OOP-Kursas-Prison\Prison\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\User\Desktop\OOP-Kursas-Prison\Prison\obj\Debug\Prison.csproj.GenerateResource.cache
+C:\Users\User\Desktop\OOP-Kursas-Prison\Prison\obj\Debug\Prison.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\OOP-Kursas-Prison\Prison\obj\Debug\Prison.exe
+C:\Users\User\Desktop\OOP-Kursas-Prison\Prison\obj\Debug\Prison.pdb

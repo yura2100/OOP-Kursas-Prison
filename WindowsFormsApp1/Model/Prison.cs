@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using WindowsFormsApp1.DAL;
 
-namespace WindowsFormsApp1
+namespace WindowsFormsApp1.Model
 {
     [Serializable]
     public class Prison
     {
-        public int CurentPrisoner { get; set; }
         public List<Prisoner> Prisoners;
         public List<Room> Rooms;
         public int MaxPrisoners => Rooms.Aggregate(0, (a, room) => a + room.Max);
@@ -21,21 +20,25 @@ namespace WindowsFormsApp1
 
         public void Add(string name, string surname, string patronymic, int year, int month, int day)
         {
-            if (CurentPrisoner < MaxPrisoners)
+            if (Prisoners.Count + 1 < MaxPrisoners)
             {
-                var prisoner = new Prisoner(name, surname, patronymic, year, month, day, CurentPrisoner);
+                var prisoner = new Prisoner(name, surname, patronymic, Prisoners.Count);
                 var tempRoom = Rooms.First(r => r.Free != 0);
                 tempRoom.Free--;
                 prisoner.Room = tempRoom;
-                Prisoners.Insert(CurentPrisoner, prisoner);
-                CurentPrisoner++;
+                Prisoners.Add(prisoner);
             }
         }
 
         public void Remove(int id)
         {
+            Prisoners[id].Room.Free++;
             Prisoners.RemoveAt(id);
-            CurentPrisoner = id;
+
+            for (int i = 0; i < Prisoners.Count; i++)
+            {
+                Prisoners[i].ID = i;
+            }
         }
 
         public List<Prisoner> FindByID(string id)

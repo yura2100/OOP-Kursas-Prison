@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp1.Forms
+namespace WindowsFormsApp1.Forms.CustomElements
 {
     class TextBoxWithPlaceholder : TextBox
     {
