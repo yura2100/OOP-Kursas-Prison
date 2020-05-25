@@ -97,5 +97,49 @@ namespace WindowsFormsApp1.Forms
                 MessageBox.Show("Спочатку треба вибрати рису характеру");
             }
         }
+
+        private void buttonChange_Click(object sender, EventArgs e)
+        {
+            if (_prisoner != null)
+            {
+                _prisoner.Name = textBoxName.Text;
+                _prisoner.Surname = textBoxSurname.Text;
+                _prisoner.Patronymic = textBoxPatronymic.Text;
+
+                try
+                {
+                    string[] birth = textBoxBirth.Text.Split('.');
+                    _prisoner.BirthDate = new DateTime(Int32.Parse(birth[2]), Int32.Parse(birth[1]), Int32.Parse(birth[0]));
+                    
+                    string[] guard = textBoxStateGuardDate.Text.Split('.');
+                    _prisoner.State.GuardDate = new DateTime(Int32.Parse(guard[2]), Int32.Parse(guard[1]), Int32.Parse(guard[0]));
+                    
+                    if (Global.Codex.ContainsKey(textBoxStateNumber.Text))
+                    {
+                        _prisoner.State.Number = textBoxStateNumber.Text;
+                    }
+                    else
+                    {
+                        throw new ArgumentException();
+                    }
+                    _prisoner.State.Length.Years = Int32.Parse(textBoxYears.Text);
+                    _prisoner.State.Length.Months = Int32.Parse(textBoxMonths.Text);
+                    _prisoner.State.Length.Days = Int32.Parse(textBoxDays.Text);
+                }
+                catch (Exception exception)
+                {
+                    MessageBox.Show("Введен невірний аргумент");
+                }
+
+                textBoxAge.Text = _prisoner.Age.ToString();
+                textBoxStateText.Text = _prisoner.State.Text;
+                textBoxStateReleaseDate.Text = _prisoner.State.ReleaseDate.ToShortDateString();
+                UpdateListView(Global.Prison.Prisoners);
+            }
+            else
+            {
+                MessageBox.Show("Спочатку треба вибрати в'язня");
+            }
+        }
     }
 }

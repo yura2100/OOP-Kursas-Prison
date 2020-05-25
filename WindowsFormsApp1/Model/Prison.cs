@@ -84,5 +84,38 @@ namespace WindowsFormsApp1.Model
         {
             new Dao().Save();
         }
+
+        public Stats DoStatistics()
+        {
+            Stats stats = new Stats();
+            foreach (var prisoner in Prisoners)
+            {
+                string state = prisoner.State.Number;
+                int age = prisoner.Age;
+
+                if (stats.State.ContainsKey(state))
+                    stats.State[state]++;
+                else
+                    stats.State.Add(state, 1);
+
+                if (stats.Age.ContainsKey(age))
+                    stats.Age[age]++;
+                else
+                    stats.Age.Add(age, 1);
+
+                stats.AverageAge += age;
+            }
+            stats.AverageAge /= Prisoners.Count;
+
+            stats.MaxState = stats.State.First(x => x.Value == stats.State.Values.Max()).Key;
+            stats.MaxAge = stats.Age.First(x => x.Value == stats.Age.Values.Max()).Key;
+            
+            foreach (var age in stats.Age.Keys)
+            {
+                if (stats.Age[age] > stats.Age[stats.MaxAge]) stats.MaxAge = age;
+            }
+            
+            return stats;
+        }
     }
 }

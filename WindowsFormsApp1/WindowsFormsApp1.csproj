@@ -93,9 +93,11 @@
     <Compile Include="Forms\Statistics.Designer.cs">
       <DependentUpon>Statistics.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\Length.cs" />
     <Compile Include="Model\Person.cs" />
     <Compile Include="Model\Prison.cs" />
     <Compile Include="Model\Prisoner.cs" />
+    <Compile Include="Model\Stats.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Model\Relative.cs" />

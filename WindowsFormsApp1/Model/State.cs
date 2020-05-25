@@ -21,31 +21,16 @@ namespace WindowsFormsApp1.Model
                 return releaseDate;
             }
         }
-        
-        public State() { }
+
+        public State()
+        {
+        }
 
         public State(string number, int guardYear, int guardMonth, int guardDay, int years, int months, int days)
         {
             Number = number;
             GuardDate = new DateTime(guardYear, guardMonth, guardDay);
             Length = new Length(years, months, days);
-        }
-    }
-    
-    [Serializable]
-    public class Length
-    {
-        public int Years { get; set; }
-        public int Months { get; set; }
-        public int Days { get; set; }
-        
-        public Length(){}
-
-        public Length(int years, int months, int days)
-        {
-            Years = years;
-            Months = months;
-            Days = days;
         }
     }
 }

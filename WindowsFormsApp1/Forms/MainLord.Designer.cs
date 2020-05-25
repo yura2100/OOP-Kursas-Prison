@@ -32,12 +32,12 @@ namespace WindowsFormsApp1.Forms
         private void InitializeComponent()
         {
             this.buttonAddPrisoner = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.buttonDeletePrisoner = new System.Windows.Forms.Button();
             this.buttonAddRelative = new System.Windows.Forms.Button();
             this.buttonDeleteRelative = new System.Windows.Forms.Button();
             this.buttonDeleteCharacter = new System.Windows.Forms.Button();
             this.buttonAddCharacter = new System.Windows.Forms.Button();
+            this.buttonChange = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -57,12 +57,12 @@ namespace WindowsFormsApp1.Forms
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.buttonChange);
             this.panel2.Controls.Add(this.buttonDeleteCharacter);
             this.panel2.Controls.Add(this.buttonAddCharacter);
             this.panel2.Controls.Add(this.buttonDeleteRelative);
             this.panel2.Controls.Add(this.buttonAddRelative);
             this.panel2.Controls.Add(this.buttonDeletePrisoner);
-            this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.SetChildIndex(this.label1, 0);
             this.panel2.Controls.SetChildIndex(this.textBoxName, 0);
             this.panel2.Controls.SetChildIndex(this.label2, 0);
@@ -103,12 +103,48 @@ namespace WindowsFormsApp1.Forms
             this.panel2.Controls.SetChildIndex(this.listViewRelatives, 0);
             this.panel2.Controls.SetChildIndex(this.label22, 0);
             this.panel2.Controls.SetChildIndex(this.listViewCharacter, 0);
-            this.panel2.Controls.SetChildIndex(this.button2, 0);
             this.panel2.Controls.SetChildIndex(this.buttonDeletePrisoner, 0);
             this.panel2.Controls.SetChildIndex(this.buttonAddRelative, 0);
             this.panel2.Controls.SetChildIndex(this.buttonDeleteRelative, 0);
             this.panel2.Controls.SetChildIndex(this.buttonAddCharacter, 0);
             this.panel2.Controls.SetChildIndex(this.buttonDeleteCharacter, 0);
+            this.panel2.Controls.SetChildIndex(this.buttonChange, 0);
+            // 
+            // textBoxBirth
+            // 
+            this.textBoxBirth.ReadOnly = false;
+            // 
+            // textBoxDays
+            // 
+            this.textBoxDays.ReadOnly = false;
+            // 
+            // textBoxMonths
+            // 
+            this.textBoxMonths.ReadOnly = false;
+            // 
+            // textBoxName
+            // 
+            this.textBoxName.ReadOnly = false;
+            // 
+            // textBoxPatronymic
+            // 
+            this.textBoxPatronymic.ReadOnly = false;
+            // 
+            // textBoxStateGuardDate
+            // 
+            this.textBoxStateGuardDate.ReadOnly = false;
+            // 
+            // textBoxStateNumber
+            // 
+            this.textBoxStateNumber.ReadOnly = false;
+            // 
+            // textBoxSurname
+            // 
+            this.textBoxSurname.ReadOnly = false;
+            // 
+            // textBoxYears
+            // 
+            this.textBoxYears.ReadOnly = false;
             // 
             // buttonAddPrisoner
             // 
@@ -121,18 +157,6 @@ namespace WindowsFormsApp1.Forms
             this.buttonAddPrisoner.TabIndex = 6;
             this.buttonAddPrisoner.Text = "Додати нового в\'язня";
             this.buttonAddPrisoner.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.SystemColors.Highlight;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
-            this.button2.Location = new System.Drawing.Point(-1, 800);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(260, 60);
-            this.button2.TabIndex = 66;
-            this.button2.Text = "Внести зміни";
-            this.button2.UseVisualStyleBackColor = false;
             // 
             // buttonDeletePrisoner
             // 
@@ -195,6 +219,19 @@ namespace WindowsFormsApp1.Forms
             this.buttonAddCharacter.UseVisualStyleBackColor = false;
             this.buttonAddCharacter.Click += new System.EventHandler(this.buttonAddCharacter_Click_1);
             // 
+            // buttonChange
+            // 
+            this.buttonChange.BackColor = System.Drawing.SystemColors.Highlight;
+            this.buttonChange.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.buttonChange.Location = new System.Drawing.Point(0, 800);
+            this.buttonChange.Name = "buttonChange";
+            this.buttonChange.Size = new System.Drawing.Size(259, 60);
+            this.buttonChange.TabIndex = 72;
+            this.buttonChange.Text = "Внести зміни";
+            this.buttonChange.UseVisualStyleBackColor = false;
+            this.buttonChange.Click += new System.EventHandler(this.buttonChange_Click);
+            // 
             // MainLord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -214,10 +251,10 @@ namespace WindowsFormsApp1.Forms
             this.PerformLayout();
         }
 
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button buttonAddCharacter;
         private System.Windows.Forms.Button buttonAddPrisoner;
         private System.Windows.Forms.Button buttonAddRelative;
+        private System.Windows.Forms.Button buttonChange;
         private System.Windows.Forms.Button buttonDeleteCharacter;
         private System.Windows.Forms.Button buttonDeletePrisoner;
         private System.Windows.Forms.Button buttonDeleteRelative;
