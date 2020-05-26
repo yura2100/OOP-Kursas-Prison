@@ -49,11 +49,15 @@ namespace WindowsFormsApp1.Forms
             // listView1
             // 
             this.listView1.Location = new System.Drawing.Point(-1, 118);
-            this.listView1.Size = new System.Drawing.Size(248, 316);
+            this.listView1.Size = new System.Drawing.Size(248, 320);
             // 
             // listViewCharacter
             // 
             this.listViewCharacter.Location = new System.Drawing.Point(170, 590);
+            // 
+            // panel1
+            // 
+            this.panel1.Size = new System.Drawing.Size(810, 34);
             // 
             // panel2
             // 
@@ -157,6 +161,7 @@ namespace WindowsFormsApp1.Forms
             this.buttonAddPrisoner.TabIndex = 6;
             this.buttonAddPrisoner.Text = "Додати нового в\'язня";
             this.buttonAddPrisoner.UseVisualStyleBackColor = false;
+            this.buttonAddPrisoner.Click += new System.EventHandler(this.buttonAddPrisoner_Click);
             // 
             // buttonDeletePrisoner
             // 
@@ -235,7 +240,7 @@ namespace WindowsFormsApp1.Forms
             // MainLord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(796, 446);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.buttonAddPrisoner);
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "MainLord";

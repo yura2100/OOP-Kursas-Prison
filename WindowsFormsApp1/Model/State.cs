@@ -26,10 +26,10 @@ namespace WindowsFormsApp1.Model
         {
         }
 
-        public State(string number, int guardYear, int guardMonth, int guardDay, int years, int months, int days)
+        public State(string number, DateTime guardDate, int years, int months, int days)
         {
             Number = number;
-            GuardDate = new DateTime(guardYear, guardMonth, guardDay);
+            GuardDate = guardDate;
             Length = new Length(years, months, days);
         }
     }

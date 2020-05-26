@@ -141,5 +141,11 @@ namespace WindowsFormsApp1.Forms
                 MessageBox.Show("Спочатку треба вибрати в'язня");
             }
         }
+
+        private void buttonAddPrisoner_Click(object sender, EventArgs e)
+        {
+            AddPrisoner f = new AddPrisoner();
+            f.Show();
+        }
     }
 }

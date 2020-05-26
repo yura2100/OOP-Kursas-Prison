@@ -101,7 +101,7 @@ namespace WindowsFormsApp1.Forms
             this.panel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel1.Location = new System.Drawing.Point(-1, 24);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(798, 34);
+            this.panel1.Size = new System.Drawing.Size(806, 34);
             this.panel1.TabIndex = 3;
             // 
             // comboBox1
@@ -162,7 +162,7 @@ namespace WindowsFormsApp1.Forms
             this.listView1.Location = new System.Drawing.Point(-1, 58);
             this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(248, 376);
+            this.listView1.Size = new System.Drawing.Size(248, 380);
             this.listView1.TabIndex = 4;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -213,7 +213,7 @@ namespace WindowsFormsApp1.Forms
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(248, 58);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(538, 376);
+            this.panel2.Size = new System.Drawing.Size(538, 380);
             this.panel2.TabIndex = 5;
             // 
             // listViewCharacter
@@ -674,11 +674,10 @@ namespace WindowsFormsApp1.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.CausesValidation = false;
-            this.ClientSize = new System.Drawing.Size(796, 446);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Location = new System.Drawing.Point(15, 15);
             this.Name = "Main";
             this.Text = "Головна";

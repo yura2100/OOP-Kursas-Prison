@@ -28,3 +28,4 @@ C:\Users\User\Desktop\OOP-Kursas-Prison\WindowsFormsApp1\obj\Debug\WindowsFormsA
 C:\Users\User\Desktop\OOP-Kursas-Prison\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 C:\Users\User\Desktop\OOP-Kursas-Prison\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Forms.AddRelative.resources
 C:\Users\User\Desktop\OOP-Kursas-Prison\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Forms.AddCharacter.resources
+C:\Users\User\Desktop\OOP-Kursas-Prison\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Forms.AddPrisoner.resources

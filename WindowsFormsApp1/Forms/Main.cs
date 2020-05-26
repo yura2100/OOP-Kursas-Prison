@@ -51,7 +51,7 @@ namespace WindowsFormsApp1.Forms
             UpdateListView(Global.Prison.Prisoners);
         }
 
-        protected void UpdateListView(List<Prisoner> list)
+        public void UpdateListView(List<Prisoner> list)
         {
             foreach (var item in listView1.Items)
             {

@@ -18,11 +18,13 @@ namespace WindowsFormsApp1.Model
             Rooms = new List<Room>();
         }
 
-        public void Add(string name, string surname, string patronymic, int year, int month, int day)
+        public void Add(string name, string surname, string patronymic, DateTime birth, string stateNumber, DateTime guardDate, int years, int months, int days)
         {
-            if (Prisoners.Count + 1 < MaxPrisoners)
+            if (Prisoners.Count < MaxPrisoners)
             {
                 var prisoner = new Prisoner(name, surname, patronymic, Prisoners.Count);
+                prisoner.BirthDate = birth;
+                prisoner.State = new State(stateNumber, guardDate, years, months, days);
                 var tempRoom = Rooms.First(r => r.Free != 0);
                 tempRoom.Free--;
                 prisoner.Room = tempRoom;
