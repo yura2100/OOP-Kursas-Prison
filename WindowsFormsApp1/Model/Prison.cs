@@ -5,6 +5,7 @@ using WindowsFormsApp1.DAL;
 
 namespace WindowsFormsApp1.Model
 {
+    //Клас в'язниці
     [Serializable]
     public class Prison
     {
@@ -18,6 +19,7 @@ namespace WindowsFormsApp1.Model
             Rooms = new List<Room>();
         }
 
+        //Додавання нового в'язня
         public void Add(string name, string surname, string patronymic, DateTime birth, string stateNumber, DateTime guardDate, int years, int months, int days)
         {
             if (Prisoners.Count < MaxPrisoners)
@@ -32,6 +34,7 @@ namespace WindowsFormsApp1.Model
             }
         }
 
+        //Видалення в'язня
         public void Remove(int id)
         {
             Prisoners[id].Room.Free++;
@@ -43,6 +46,7 @@ namespace WindowsFormsApp1.Model
             }
         }
 
+        //Пошук в'язня за ID
         public List<Prisoner> FindByID(string id)
         {
             int idInt;
@@ -53,11 +57,13 @@ namespace WindowsFormsApp1.Model
                 throw new ArgumentException();
         }
 
+        //Пошук в'язня за номером статті
         public List<Prisoner> FindByStateNumber(string number)
         {
             return Prisoners.FindAll(p => p.State.Number == number);
         }
 
+        //Пошук в'язня за номером камери
         public List<Prisoner> FindByRoomNumber(string number)
         {
             int numberInt;
@@ -68,6 +74,7 @@ namespace WindowsFormsApp1.Model
                 throw new ArgumentException();
         }
 
+        //Пошук в'язня за ПІБ
         public List<Prisoner> FindByName(string name)
         {
             return Prisoners.FindAll(p =>
@@ -77,16 +84,19 @@ namespace WindowsFormsApp1.Model
             });
         }
 
+        //Загрузка даних
         public void Load()
         {
             new Dao().Load();
         }
 
+        //Сбереження даних
         public void Save()
         {
             new Dao().Save();
         }
 
+        //Підрахунок статистики
         public Stats DoStatistics()
         {
             Stats stats = new Stats();

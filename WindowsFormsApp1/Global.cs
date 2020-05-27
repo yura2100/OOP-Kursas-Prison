@@ -4,6 +4,7 @@ using WindowsFormsApp1.Model;
 
 namespace WindowsFormsApp1
 {
+    //Глобальний стан програми
     public static class Global
     {
         public static Prison Prison = new Prison();

@@ -4,6 +4,7 @@ using WindowsFormsApp1.Model;
 
 namespace WindowsFormsApp1.Forms
 {
+    //Форма додавання нової риси характеру
     public partial class AddCharacter : Form
     {
         private Prisoner _prisoner;
@@ -13,7 +14,7 @@ namespace WindowsFormsApp1.Forms
             this._prisoner = prisoner;
         }
 
-
+        //Обробка події натискання на кнопку "Додати рису"
         private void button1_Click(object sender, EventArgs e)
         {
             bool fail = textBoxCharacter.TextLength == 0;

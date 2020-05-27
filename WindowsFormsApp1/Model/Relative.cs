@@ -2,6 +2,7 @@
 
 namespace WindowsFormsApp1.Model
 {
+    //Клас родича
     [Serializable]
     public class Relative : Person
     {

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace WindowsFormsApp1.Model
 {
+    //Клас в'язня
     [Serializable]
     public class Prisoner : Person
     {

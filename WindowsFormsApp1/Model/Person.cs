@@ -2,6 +2,7 @@
 
 namespace WindowsFormsApp1.Model
 {
+    //Клас людини
     public abstract class Person
     {
         public string Name { get; set; }

@@ -9,6 +9,7 @@ using WindowsFormsApp1.Model;
 
 namespace WindowsFormsApp1.DAL
 {
+    //Клас доступу до даних
     class Dao
     {
         const string pathPrison = "Prison.xml";

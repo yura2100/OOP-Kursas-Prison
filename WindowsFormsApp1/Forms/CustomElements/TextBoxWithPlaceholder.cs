@@ -3,6 +3,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1.Forms.CustomElements
 {
+    //Поле для вводу тексту з плейсхолдером 
     class TextBoxWithPlaceholder : TextBox
     {
         public string Placeholder { get; set; }

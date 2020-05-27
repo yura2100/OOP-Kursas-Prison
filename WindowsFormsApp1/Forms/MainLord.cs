@@ -4,6 +4,7 @@ using WindowsFormsApp1.Model;
 
 namespace WindowsFormsApp1.Forms
 {
+    //Основна форма начальника в'язниці
     public partial class MainLord : Main
     {
         private Prisoner _prisoner;
@@ -11,7 +12,8 @@ namespace WindowsFormsApp1.Forms
         {
             InitializeComponent();
         }
-
+        
+        //Обробка події натискання на елемент зі списку в'язнів
         protected override void listView1_MouseClick(object sender, MouseEventArgs e)
         {
             base.listView1_MouseClick(sender, e);
@@ -19,6 +21,7 @@ namespace WindowsFormsApp1.Forms
             
         }
 
+        //Обробка події натискання на кнопку "Видалити в'язня"
         private void buttonDeletePrisoner_Click(object sender, EventArgs e)
         {
             if (_prisoner != null)
@@ -36,6 +39,7 @@ namespace WindowsFormsApp1.Forms
             }
         }
 
+        //Обробка події натискання на кнопку "Додати родича"
         private void buttonAddRelative_Click(object sender, EventArgs e)
         {
             if (_prisoner != null)
@@ -49,6 +53,7 @@ namespace WindowsFormsApp1.Forms
             }
         }
 
+        //Обробка події натискання на кнопку "Видалити родича"
         private void buttonDeleteRelative_Click(object sender, EventArgs e)
         {
             try
@@ -67,6 +72,7 @@ namespace WindowsFormsApp1.Forms
             }
         }
         
+        //Обробка події натискання на кнопку "Додати рису характеру"
         private void buttonAddCharacter_Click_1(object sender, EventArgs e)
         {
             if (_prisoner != null)
@@ -80,6 +86,7 @@ namespace WindowsFormsApp1.Forms
             }
         }
 
+        //Обробка події натискання на кнопку "Видалити рису характеру"
         private void buttonDeleteCharacter_Click(object sender, EventArgs e)
         {
             try
@@ -98,6 +105,7 @@ namespace WindowsFormsApp1.Forms
             }
         }
 
+        //Обробка події натискання на кнопку "Внести зміни"
         private void buttonChange_Click(object sender, EventArgs e)
         {
             if (_prisoner != null)
@@ -142,6 +150,7 @@ namespace WindowsFormsApp1.Forms
             }
         }
 
+        //Обробка події натискання на кнопку "Додати нового в'язня"
         private void buttonAddPrisoner_Click(object sender, EventArgs e)
         {
             AddPrisoner f = new AddPrisoner();

@@ -5,6 +5,7 @@ using WindowsFormsApp1.Model;
 
 namespace WindowsFormsApp1.Forms
 {
+    //Основна форма для персоналу
     public partial class Main : Menu
     {
         public Main()
@@ -12,6 +13,7 @@ namespace WindowsFormsApp1.Forms
             InitializeComponent();
         }
 
+        //Обробка події натискання на кнопку "Шукати"
         private void button1_Click(object sender, EventArgs e)
         {
             try
@@ -46,11 +48,13 @@ namespace WindowsFormsApp1.Forms
             }
         }
 
+        //Обробка події показу форми
         private void Main_Shown(object sender, EventArgs e)
         {
             UpdateListView(Global.Prison.Prisoners);
         }
 
+        //Метод оновлення відображення даних у списку в'язнів
         public void UpdateListView(List<Prisoner> list)
         {
             foreach (var item in listView1.Items)
@@ -67,6 +71,7 @@ namespace WindowsFormsApp1.Forms
             }
         }
         
+        //Метод оновлення відображення даних у списку родичів
         public void UpdateRelativesList(Prisoner prisoner)
         {
             foreach (var item in listViewRelatives.Items)
@@ -85,6 +90,7 @@ namespace WindowsFormsApp1.Forms
             }
         }
 
+        //Метод оновлення відображення даних у списку рис характеру
         public void UpdateCharacterList(Prisoner prisoner)
         {
             foreach (var item in listViewCharacter.Items)
@@ -100,6 +106,7 @@ namespace WindowsFormsApp1.Forms
             }
         }
         
+        //Обробка події натискання на елемент зі списку в'язнів
         protected virtual void listView1_MouseClick(object sender, MouseEventArgs e)
         {
             Prisoner prisoner = (Prisoner) listView1.SelectedItems[0].Tag;

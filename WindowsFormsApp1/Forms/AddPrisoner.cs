@@ -4,6 +4,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1.Forms
 {
+    //Форма додавання нового в'язня
     public partial class AddPrisoner : Form
     {
         public AddPrisoner()
@@ -11,6 +12,7 @@ namespace WindowsFormsApp1.Forms
             InitializeComponent();
         }
 
+        //Обробка події натискання на кнопку "Додати нового в'язня"
         private void buttonAddPrisoner_Click(object sender, EventArgs e)
         {
             bool fail = this.Controls.OfType<TextBox>().Any(tb => tb.TextLength == 0);

@@ -2,6 +2,7 @@
 
 namespace WindowsFormsApp1.Model
 {
+    //Клас сроку
     [Serializable]
     public class State
     {

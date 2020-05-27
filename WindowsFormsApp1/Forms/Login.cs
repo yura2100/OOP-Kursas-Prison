@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1.Forms
 {
+    //Форма авторізації
     public partial class Login : Form
     {
         public Login()
@@ -17,25 +18,16 @@ namespace WindowsFormsApp1.Forms
             InitializeComponent();
         }
 
+        //Обробка події натискання на кнопку "Увійти як гість"
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
             Global.Main = new Main();
             Global.Main.Show();
             Global.Prison.Load();
-            // Prisoner p = new Prisoner("Ivan", "Ivanov", "Ivanovich", 1900, 12, 1, 1);
-            // p.State = new State("123", 2018, 12, 11, 20, 11, 0);
-            // Room r = new Room();
-            // r.Number = 1;
-            // r.Current = 1;
-            // r.Max = 8;
-            // p.Room = r;
-            // Global.Prison.Prisoners.Add(p);
-            // Global.Prison.Rooms.Add(r);
-            // Global.Prison.CurentPrisoner = 1;
-            // Global.Prison.Save();
         }
 
+        //Обробка події натискання на кнопку "Увійти"
         private void button1_Click(object sender, EventArgs e)
         {
             if (this.textBox1.Text == "1")

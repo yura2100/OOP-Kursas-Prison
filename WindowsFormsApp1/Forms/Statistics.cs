@@ -3,6 +3,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1.Forms
 {
+    //Форма статистики
     public partial class Statistics : Menu
     {
         public Statistics()
@@ -10,6 +11,7 @@ namespace WindowsFormsApp1.Forms
             InitializeComponent();
         }
         
+        //Обробка події зміни видимості
         private void Statistics_VisibleChanged(object sender, EventArgs e)
         {
             if (this.Visible)

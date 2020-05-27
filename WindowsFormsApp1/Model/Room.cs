@@ -2,6 +2,7 @@
 
 namespace WindowsFormsApp1.Model
 {
+    //Клас камери
     [Serializable]
     public class Room
     {

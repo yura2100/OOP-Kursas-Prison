@@ -2,6 +2,7 @@
 
 namespace WindowsFormsApp1.Model
 {
+    //Клас довжини тюремного сроку
     [Serializable]
     public class Length
     {

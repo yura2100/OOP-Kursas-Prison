@@ -2,6 +2,7 @@
 
 namespace WindowsFormsApp1.Model
 {
+    //Клас статистики
     public class Stats
     {
         public Dictionary<string, int> State = new Dictionary<string, int>();

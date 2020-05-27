@@ -5,6 +5,7 @@ using WindowsFormsApp1.Model;
 
 namespace WindowsFormsApp1.Forms
 {
+    //Форма додавання нового родича
     public partial class AddRelative : Form
     {
         private Prisoner _prisoner;
@@ -14,6 +15,7 @@ namespace WindowsFormsApp1.Forms
             this._prisoner = prisoner;
         }
 
+        //Обробка події натискання на кнопку "Додати родича"
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             bool fail = this.Controls.OfType<TextBox>().Any(tb => tb.TextLength == 0);
