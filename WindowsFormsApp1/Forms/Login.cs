@@ -16,6 +16,8 @@ namespace WindowsFormsApp1.Forms
         public Login()
         {
             InitializeComponent();
+            
+            Global.Prison.Load();
         }
 
         //Обробка події натискання на кнопку "Увійти як гість"
@@ -24,18 +26,16 @@ namespace WindowsFormsApp1.Forms
             this.Hide();
             Global.Main = new Main();
             Global.Main.Show();
-            Global.Prison.Load();
         }
 
         //Обробка події натискання на кнопку "Увійти"
         private void button1_Click(object sender, EventArgs e)
         {
-            if (this.textBox1.Text == "1")
+            if (this.textBox1.Text == Global.Prison.Password)
             {
                 this.Hide();
                 Global.Main = new MainLord();
                 Global.Main.Show();
-                Global.Prison.Load();
             }
             else
             {

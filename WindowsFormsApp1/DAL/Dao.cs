@@ -12,8 +12,9 @@ namespace WindowsFormsApp1.DAL
     //Клас доступу до даних
     class Dao
     {
-        const string pathPrison = "Prison.xml";
-        const string pathCodex = "Codex.txt";
+        private const string pathPrison = "Prison.xml";
+        private const string pathPassword = "Password.txt";
+        private const string pathCodex = "Codex.txt";
 
         public void Save()
         {
@@ -27,21 +28,25 @@ namespace WindowsFormsApp1.DAL
 
         public void Load()
         {
-            TextReader reader = new StreamReader(pathCodex, Encoding.Default);
-            string[] arr = reader.ReadToEnd().Split('\n');
-            reader.Close();
-            
-            foreach (var item in arr)
-            {
-                string[] elements = item.Split(':');
-                Global.Codex.Add(elements[0], elements[1]);
-            }
-            
             XmlSerializer xml = new XmlSerializer(typeof(Prison));
             
             using (FileStream fs = new FileStream(pathPrison, FileMode.OpenOrCreate))
             {
                 Global.Prison = (Prison)xml.Deserialize(fs);
+            }
+            
+            TextReader readerPassword = new StreamReader(pathPassword, Encoding.Default);
+            Global.Prison.Password = readerPassword.ReadToEnd();
+            readerPassword.Close();
+            
+            TextReader readerCodex = new StreamReader(pathCodex, Encoding.Default);
+            string[] arr = readerCodex.ReadToEnd().Split('\n');
+            readerCodex.Close();
+            
+            foreach (var item in arr)
+            {
+                string[] elements = item.Split(':');
+                Global.Codex.Add(elements[0], elements[1]);
             }
         }
     }

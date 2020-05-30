@@ -9,6 +9,7 @@ namespace WindowsFormsApp1.Model
     [Serializable]
     public class Prison
     {
+        public string Password { get; set; }
         public List<Prisoner> Prisoners;
         public List<Room> Rooms;
         public int MaxPrisoners => Rooms.Aggregate(0, (a, room) => a + room.Max);
@@ -74,7 +75,7 @@ namespace WindowsFormsApp1.Model
                 throw new ArgumentException();
         }
 
-        //Пошук в'язня за ПІБ
+        //Пошук в'язня за ПІП
         public List<Prisoner> FindByName(string name)
         {
             return Prisoners.FindAll(p =>
