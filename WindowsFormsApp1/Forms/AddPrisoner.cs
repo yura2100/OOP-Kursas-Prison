@@ -30,9 +30,9 @@ namespace WindowsFormsApp1.Forms
                     int months = Int32.Parse(textBoxMonths.Text);
                     int days = Int32.Parse(textBoxDays.Text);
 
-                    if (Global.Codex.ContainsKey(textBoxStateNumber.Text))
+                    if (Global.Codex.ContainsKey(comboBoxStateNumber.Text))
                     {
-                        string stateNumber = textBoxStateNumber.Text;
+                        string stateNumber = comboBoxStateNumber.Text;
                         
                         Global.Prison.Add(name, surname, patronymic, birthDate, stateNumber, guardDate, years, months, days);
                         Global.Main.UpdateListView(Global.Prison.Prisoners);

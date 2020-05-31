@@ -7,9 +7,13 @@ namespace WindowsFormsApp1
     //Глобальний стан програми
     public static class Global
     {
+        //Об'єкт в'язниці
         public static Prison Prison = new Prison();
+        //Словник кримінального кодексу України
         public static Dictionary<string, string> Codex = new Dictionary<string, string>();
+        //Головна форма
         public static Main Main;
-        public static Statistics Statistics= new Statistics();
+        //Форма статистики
+        public static Statistics Statistics = new Statistics();
     }
 }

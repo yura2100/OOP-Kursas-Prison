@@ -6,11 +6,15 @@ namespace WindowsFormsApp1.Model
     [Serializable]
     public class State
     {
+        //Номер статті
         public string Number { get; set; }
+        //Текст статті
         public string Text => Global.Codex[Number];
+        //Дата взяття під варту
         public DateTime GuardDate { get; set; }
+        //Довжина сроку
         public Length Length;
-
+        //Дата визволення
         public DateTime ReleaseDate
         {
             get

@@ -2,91 +2,30 @@
 <Prison xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Prisoners>
     <Prisoner>
-      <Name>Іван</Name>
-      <Surname>Іванов</Surname>
-      <Patronymic>Івановіч</Patronymic>
-      <Relatives>
-        <Relative>
-          <Name>Роман</Name>
-          <Surname>Романов</Surname>
-          <Patronymic>Романовіч</Patronymic>
-          <Relation>Батько</Relation>
-        </Relative>
-      </Relatives>
-      <Character>
-        <string>Шиза</string>
-      </Character>
-      <State>
-        <Length>
-          <Years>22</Years>
-          <Months>11</Months>
-          <Days>0</Days>
-        </Length>
-        <Number>322</Number>
-        <GuardDate>2017-12-11T00:00:00</GuardDate>
-      </State>
-      <Room>
-        <Number>1</Number>
-        <Max>8</Max>
-        <Free>1</Free>
-      </Room>
-      <ID>0</ID>
-      <BirthDate>2000-12-01T00:00:00</BirthDate>
-    </Prisoner>
-    <Prisoner>
-      <Name>Антон</Name>
-      <Surname>Антонов</Surname>
-      <Patronymic>Антоновіч</Patronymic>
-      <Relatives />
-      <Character>
-        <string>Агресивний</string>
-      </Character>
-      <State>
-        <Length>
-          <Years>10</Years>
-          <Months>11</Months>
-          <Days>0</Days>
-        </Length>
-        <Number>400</Number>
-        <GuardDate>2016-12-11T00:00:00</GuardDate>
-      </State>
-      <Room>
-        <Number>1</Number>
-        <Max>8</Max>
-        <Free>1</Free>
-      </Room>
-      <ID>1</ID>
-      <BirthDate>1997-12-01T00:00:00</BirthDate>
-    </Prisoner>
-    <Prisoner>
-      <Name>Бока</Name>
-      <Surname>Жока</Surname>
-      <Patronymic>Пуповіч</Patronymic>
+      <Name>1</Name>
+      <Surname>1</Surname>
+      <Patronymic>1</Patronymic>
       <Relatives />
       <Character />
       <State>
         <Length>
-          <Years>3</Years>
-          <Months>3</Months>
-          <Days>4</Days>
+          <Years>1</Years>
+          <Months>1</Months>
+          <Days>1</Days>
         </Length>
-        <Number>332</Number>
-        <GuardDate>2020-05-26T15:29:02.9010997+03:00</GuardDate>
+        <Number>112</Number>
+        <GuardDate>2020-05-31T00:00:00</GuardDate>
       </State>
-      <Room>
-        <Number>1</Number>
-        <Max>8</Max>
-        <Free>7</Free>
-      </Room>
-      <ID>2</ID>
-      <BirthDate>1989-06-07T15:29:02</BirthDate>
+      <RoomNumber>1</RoomNumber>
+      <ID>0</ID>
+      <BirthDate>2020-05-05T00:00:00</BirthDate>
     </Prisoner>
   </Prisoners>
   <Rooms>
     <Room>
       <Number>1</Number>
       <Max>8</Max>
-      <Free>6</Free>
+      <Free>7</Free>
     </Room>
     <Room>
       <Number>2</Number>

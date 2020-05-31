@@ -12,20 +12,14 @@ namespace WindowsFormsApp1.DAL
     //Клас доступу до даних
     class Dao
     {
+        //Шлях до файлу з в'язницею
         private const string pathPrison = "Prison.xml";
+        //Шлях до файлу з паролем
         private const string pathPassword = "Password.txt";
+        //Шдях до кримінального кодексу України
         private const string pathCodex = "Codex.txt";
-
-        public void Save()
-        {
-            XmlSerializer xml = new XmlSerializer(typeof(Prison));
-            
-            using(FileStream fs = new FileStream(pathPrison, FileMode.Create))
-            {
-                xml.Serialize(fs, Global.Prison);
-            }
-        }
-
+        
+        //Завантаження даних
         public void Load()
         {
             XmlSerializer xml = new XmlSerializer(typeof(Prison));
@@ -47,6 +41,17 @@ namespace WindowsFormsApp1.DAL
             {
                 string[] elements = item.Split(':');
                 Global.Codex.Add(elements[0], elements[1]);
+            }
+        }
+        
+        //Збереження даних
+        public void Save()
+        {
+            XmlSerializer xml = new XmlSerializer(typeof(Prison));
+            
+            using(FileStream fs = new FileStream(pathPrison, FileMode.Create))
+            {
+                xml.Serialize(fs, Global.Prison);
             }
         }
     }

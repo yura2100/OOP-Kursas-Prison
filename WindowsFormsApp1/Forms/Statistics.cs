@@ -19,10 +19,7 @@ namespace WindowsFormsApp1.Forms
                 var stats = Global.Prison.DoStatistics();
                 
                 //Стаття
-                foreach (var item in listViewState.Items)
-                {
-                    listViewState.Items.Remove((ListViewItem)item);
-                }
+                listViewState.Items.Clear();
             
                 foreach (var item in stats.State.Keys)
                 {
@@ -34,10 +31,7 @@ namespace WindowsFormsApp1.Forms
                 textBoxMaxState.Text = stats.MaxState;
                 
                 //Вік
-                foreach (var item in listViewAge.Items)
-                {
-                    listViewAge.Items.Remove((ListViewItem)item);
-                }
+                listViewAge.Items.Clear();
             
                 foreach (var item in stats.Age.Keys)
                 {

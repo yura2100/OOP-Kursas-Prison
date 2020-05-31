@@ -7,13 +7,20 @@ namespace WindowsFormsApp1.Model
     [Serializable]
     public class Prisoner : Person
     {
+        //ID
         public int ID { get; set; }
+        //Дата народження
         public DateTime BirthDate { get; set; }
+        //Вік
         public int Age => (int)((DateTime.Today - BirthDate).TotalDays / 365.2425);
+        //Список родичів
         public List<Relative> Relatives;
+        //Список рис характеру
         public List<string> Character;
+        //Стаття
         public State State;
-        public Room Room;
+        //Номер камери
+        public int RoomNumber;
         
         public Prisoner(){}
         

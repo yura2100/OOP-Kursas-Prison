@@ -9,9 +9,13 @@ namespace WindowsFormsApp1.Model
     [Serializable]
     public class Prison
     {
+        //Пароль для авторизації
         public string Password { get; set; }
+        //Список в'язнів
         public List<Prisoner> Prisoners;
+        //Список камер
         public List<Room> Rooms;
+        //Максимальна кількість в'язнів
         public int MaxPrisoners => Rooms.Aggregate(0, (a, room) => a + room.Max);
 
         public Prison()
@@ -29,8 +33,8 @@ namespace WindowsFormsApp1.Model
                 prisoner.BirthDate = birth;
                 prisoner.State = new State(stateNumber, guardDate, years, months, days);
                 var tempRoom = Rooms.First(r => r.Free != 0);
+                prisoner.RoomNumber = tempRoom.Number;
                 tempRoom.Free--;
-                prisoner.Room = tempRoom;
                 Prisoners.Add(prisoner);
             }
         }
@@ -38,7 +42,8 @@ namespace WindowsFormsApp1.Model
         //Видалення в'язня
         public void Remove(int id)
         {
-            Prisoners[id].Room.Free++;
+            var tempRoom = Rooms.Find(r => r.Number == Prisoners[id].RoomNumber);
+            tempRoom.Free++;
             Prisoners.RemoveAt(id);
 
             for (int i = 0; i < Prisoners.Count; i++)
@@ -70,7 +75,7 @@ namespace WindowsFormsApp1.Model
             int numberInt;
             bool success = Int32.TryParse(number, out numberInt);
             if (success)
-                return Prisoners.FindAll(p => p.Room.Number == numberInt);
+                return Prisoners.FindAll(p => p.RoomNumber == numberInt);
             else
                 throw new ArgumentException();
         }
@@ -84,8 +89,18 @@ namespace WindowsFormsApp1.Model
                 return SFP == name;
             });
         }
+        
+        //Зміна камери
+        public void ChangeRoom(Prisoner prisoner, int n)
+        {
+            var currentRoom = Rooms.Find(r => r.Number == prisoner.RoomNumber);
+            currentRoom.Free++;
+            var tempRoom = Rooms.Find(r => r.Number == n);
+            prisoner.RoomNumber = tempRoom.Number;
+            tempRoom.Free--;
+        }
 
-        //Загрузка даних
+        //Завантаження даних
         public void Load()
         {
             new Dao().Load();

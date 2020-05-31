@@ -43,7 +43,6 @@ namespace WindowsFormsApp1.Forms
             this.label6 = new System.Windows.Forms.Label();
             this.dateTimePickerGuard = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBoxStateNumber = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.textBoxYears = new System.Windows.Forms.TextBox();
@@ -53,6 +52,7 @@ namespace WindowsFormsApp1.Forms
             this.textBoxDays = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.buttonAddPrisoner = new System.Windows.Forms.Button();
+            this.comboBoxStateNumber = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -172,16 +172,6 @@ namespace WindowsFormsApp1.Forms
             this.label7.Text = "Дата взяття під варту:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // textBoxStateNumber
-            // 
-            this.textBoxStateNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxStateNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
-            this.textBoxStateNumber.Location = new System.Drawing.Point(138, 199);
-            this.textBoxStateNumber.Name = "textBoxStateNumber";
-            this.textBoxStateNumber.Size = new System.Drawing.Size(90, 17);
-            this.textBoxStateNumber.TabIndex = 12;
-            this.textBoxStateNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // label8
             // 
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
@@ -275,12 +265,27 @@ namespace WindowsFormsApp1.Forms
             this.buttonAddPrisoner.UseVisualStyleBackColor = false;
             this.buttonAddPrisoner.Click += new System.EventHandler(this.buttonAddPrisoner_Click);
             // 
+            // comboBoxStateNumber
+            // 
+            this.comboBoxStateNumber.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxStateNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.comboBoxStateNumber.FormattingEnabled = true;
+            this.comboBoxStateNumber.Location = new System.Drawing.Point(138, 197);
+            this.comboBoxStateNumber.Name = "comboBoxStateNumber";
+            this.comboBoxStateNumber.Size = new System.Drawing.Size(90, 21);
+            this.comboBoxStateNumber.TabIndex = 23;
+            foreach (var item in Global.Codex.Keys)
+            {
+                comboBoxStateNumber.Items.Add(item);
+            }
+            // 
             // AddPrisoner
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(692, 456);
+            this.Controls.Add(this.comboBoxStateNumber);
             this.Controls.Add(this.buttonAddPrisoner);
             this.Controls.Add(this.textBoxDays);
             this.Controls.Add(this.label12);
@@ -291,7 +296,6 @@ namespace WindowsFormsApp1.Forms
             this.Controls.Add(this.label9);
             this.Controls.Add(this.dateTimePickerGuard);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBoxStateNumber);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.dateTimePickerBirth);
@@ -313,6 +317,7 @@ namespace WindowsFormsApp1.Forms
         }
 
         private System.Windows.Forms.Button buttonAddPrisoner;
+        private System.Windows.Forms.ComboBox comboBoxStateNumber;
         private System.Windows.Forms.DateTimePicker dateTimePickerBirth;
         private System.Windows.Forms.DateTimePicker dateTimePickerGuard;
         private System.Windows.Forms.Label label1;
@@ -331,7 +336,6 @@ namespace WindowsFormsApp1.Forms
         private System.Windows.Forms.TextBox textBoxMonths;
         private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.TextBox textBoxPatronymic;
-        private System.Windows.Forms.TextBox textBoxStateNumber;
         private System.Windows.Forms.TextBox textBoxSurname;
         private System.Windows.Forms.TextBox textBoxYears;
 

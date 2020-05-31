@@ -18,7 +18,20 @@ namespace WindowsFormsApp1.Forms
         {
             base.listView1_MouseClick(sender, e);
             _prisoner = (Prisoner) listView1.SelectedItems[0].Tag;
+            comboBoxRoomNumber.Text = _prisoner.RoomNumber.ToString();
             
+            comboBoxRoomNumber.Items.Clear();
+            var rooms = Global.Prison.Rooms.FindAll(r => r.Free != 0);
+            foreach (var room in rooms)
+            {
+                comboBoxRoomNumber.Items.Add(room.Number);
+            }
+
+            comboBoxStateNumber.Text = _prisoner.State.Number;
+            foreach (var state in Global.Codex.Keys)
+            {
+                comboBoxStateNumber.Items.Add(state);
+            }
         }
 
         //Обробка події натискання на кнопку "Видалити в'язня"
@@ -122,9 +135,9 @@ namespace WindowsFormsApp1.Forms
                     string[] guard = textBoxStateGuardDate.Text.Split('.');
                     _prisoner.State.GuardDate = new DateTime(Int32.Parse(guard[2]), Int32.Parse(guard[1]), Int32.Parse(guard[0]));
                     
-                    if (Global.Codex.ContainsKey(textBoxStateNumber.Text))
+                    if (Global.Codex.ContainsKey(comboBoxStateNumber.Text))
                     {
-                        _prisoner.State.Number = textBoxStateNumber.Text;
+                        _prisoner.State.Number = comboBoxStateNumber.Text;
                     }
                     else
                     {
@@ -133,6 +146,11 @@ namespace WindowsFormsApp1.Forms
                     _prisoner.State.Length.Years = Int32.Parse(textBoxYears.Text);
                     _prisoner.State.Length.Months = Int32.Parse(textBoxMonths.Text);
                     _prisoner.State.Length.Days = Int32.Parse(textBoxDays.Text);
+
+                    if (Global.Prison.Rooms.Exists(r => r.Number == Int32.Parse(comboBoxRoomNumber.Text)))
+                    {
+                        Global.Prison.ChangeRoom(_prisoner, Int32.Parse(comboBoxRoomNumber.Text));
+                    }
                 }
                 catch (Exception exception)
                 {
@@ -142,6 +160,11 @@ namespace WindowsFormsApp1.Forms
                 textBoxAge.Text = _prisoner.Age.ToString();
                 textBoxStateText.Text = _prisoner.State.Text;
                 textBoxStateReleaseDate.Text = _prisoner.State.ReleaseDate.ToShortDateString();
+
+                var tempRoom = Global.Prison.Rooms.Find(r => r.Number == _prisoner.RoomNumber);
+                textBoxRoomFree.Text = tempRoom.Free.ToString();
+                textBoxRoomMax.Text = tempRoom.Max.ToString();
+                
                 UpdateListView(Global.Prison.Prisoners);
             }
             else

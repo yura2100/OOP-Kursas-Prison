@@ -111,7 +111,7 @@ namespace WindowsFormsApp1.Forms
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {"ID", "ПІБ", "Номер статті", "Номер камери"});
+            this.comboBox1.Items.AddRange(new object[] {"ID", "ПІП", "Номер статті", "Номер камери"});
             this.comboBox1.Location = new System.Drawing.Point(661, 5);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(110, 23);
@@ -739,9 +739,9 @@ namespace WindowsFormsApp1.Forms
         protected System.Windows.Forms.TextBox textBoxPatronymic;
         protected System.Windows.Forms.TextBox textBoxRoomFree;
         protected System.Windows.Forms.TextBox textBoxRoomMax;
-        protected System.Windows.Forms.TextBox textBoxRoomNumber;
+        private System.Windows.Forms.TextBox textBoxRoomNumber;
         protected System.Windows.Forms.TextBox textBoxStateGuardDate;
-        protected System.Windows.Forms.TextBox textBoxStateNumber;
+        private System.Windows.Forms.TextBox textBoxStateNumber;
         protected System.Windows.Forms.TextBox textBoxStateReleaseDate;
         protected System.Windows.Forms.TextBox textBoxStateText;
         protected System.Windows.Forms.TextBox textBoxSurname;

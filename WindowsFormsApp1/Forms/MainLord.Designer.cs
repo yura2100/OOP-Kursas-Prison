@@ -38,6 +38,8 @@ namespace WindowsFormsApp1.Forms
             this.buttonDeleteCharacter = new System.Windows.Forms.Button();
             this.buttonAddCharacter = new System.Windows.Forms.Button();
             this.buttonChange = new System.Windows.Forms.Button();
+            this.comboBoxRoomNumber = new System.Windows.Forms.ComboBox();
+            this.comboBoxStateNumber = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -61,6 +63,8 @@ namespace WindowsFormsApp1.Forms
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.comboBoxStateNumber);
+            this.panel2.Controls.Add(this.comboBoxRoomNumber);
             this.panel2.Controls.Add(this.buttonChange);
             this.panel2.Controls.Add(this.buttonDeleteCharacter);
             this.panel2.Controls.Add(this.buttonAddCharacter);
@@ -82,14 +86,12 @@ namespace WindowsFormsApp1.Forms
             this.panel2.Controls.SetChildIndex(this.label7, 0);
             this.panel2.Controls.SetChildIndex(this.label8, 0);
             this.panel2.Controls.SetChildIndex(this.label9, 0);
-            this.panel2.Controls.SetChildIndex(this.textBoxRoomNumber, 0);
             this.panel2.Controls.SetChildIndex(this.label10, 0);
             this.panel2.Controls.SetChildIndex(this.textBoxRoomMax, 0);
             this.panel2.Controls.SetChildIndex(this.label11, 0);
             this.panel2.Controls.SetChildIndex(this.textBoxRoomFree, 0);
             this.panel2.Controls.SetChildIndex(this.label12, 0);
             this.panel2.Controls.SetChildIndex(this.label13, 0);
-            this.panel2.Controls.SetChildIndex(this.textBoxStateNumber, 0);
             this.panel2.Controls.SetChildIndex(this.label14, 0);
             this.panel2.Controls.SetChildIndex(this.textBoxStateGuardDate, 0);
             this.panel2.Controls.SetChildIndex(this.label15, 0);
@@ -113,6 +115,8 @@ namespace WindowsFormsApp1.Forms
             this.panel2.Controls.SetChildIndex(this.buttonAddCharacter, 0);
             this.panel2.Controls.SetChildIndex(this.buttonDeleteCharacter, 0);
             this.panel2.Controls.SetChildIndex(this.buttonChange, 0);
+            this.panel2.Controls.SetChildIndex(this.comboBoxRoomNumber, 0);
+            this.panel2.Controls.SetChildIndex(this.comboBoxStateNumber, 0);
             // 
             // textBoxBirth
             // 
@@ -137,10 +141,6 @@ namespace WindowsFormsApp1.Forms
             // textBoxStateGuardDate
             // 
             this.textBoxStateGuardDate.ReadOnly = false;
-            // 
-            // textBoxStateNumber
-            // 
-            this.textBoxStateNumber.ReadOnly = false;
             // 
             // textBoxSurname
             // 
@@ -237,6 +237,26 @@ namespace WindowsFormsApp1.Forms
             this.buttonChange.UseVisualStyleBackColor = false;
             this.buttonChange.Click += new System.EventHandler(this.buttonChange_Click);
             // 
+            // comboBoxRoomNumber
+            // 
+            this.comboBoxRoomNumber.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxRoomNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.comboBoxRoomNumber.FormattingEnabled = true;
+            this.comboBoxRoomNumber.Location = new System.Drawing.Point(75, 141);
+            this.comboBoxRoomNumber.Name = "comboBoxRoomNumber";
+            this.comboBoxRoomNumber.Size = new System.Drawing.Size(59, 21);
+            this.comboBoxRoomNumber.TabIndex = 73;
+            // 
+            // comboBoxStateNumber
+            // 
+            this.comboBoxStateNumber.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxStateNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.comboBoxStateNumber.FormattingEnabled = true;
+            this.comboBoxStateNumber.Location = new System.Drawing.Point(75, 199);
+            this.comboBoxStateNumber.Name = "comboBoxStateNumber";
+            this.comboBoxStateNumber.Size = new System.Drawing.Size(59, 21);
+            this.comboBoxStateNumber.TabIndex = 74;
+            // 
             // MainLord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -263,6 +283,8 @@ namespace WindowsFormsApp1.Forms
         private System.Windows.Forms.Button buttonDeleteCharacter;
         private System.Windows.Forms.Button buttonDeletePrisoner;
         private System.Windows.Forms.Button buttonDeleteRelative;
+        private System.Windows.Forms.ComboBox comboBoxRoomNumber;
+        private System.Windows.Forms.ComboBox comboBoxStateNumber;
 
         #endregion
     }

@@ -6,6 +6,7 @@ namespace WindowsFormsApp1.Model
     [Serializable]
     public class Relative : Person
     {
+        //Тип рідства
         public string Relation { get; set; }
 
         public Relative(string name, string surname, string patronymic, string relation) : 

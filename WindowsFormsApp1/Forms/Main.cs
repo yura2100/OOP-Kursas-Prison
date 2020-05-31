@@ -57,11 +57,7 @@ namespace WindowsFormsApp1.Forms
         //Метод оновлення відображення даних у списку в'язнів
         public void UpdateListView(List<Prisoner> list)
         {
-            foreach (var item in listView1.Items)
-            {
-                listView1.Items.Remove((ListViewItem)item);
-            }
-            
+            listView1.Items.Clear();
             foreach (var item in list)
             {
                 ListViewItem lvi = new ListViewItem(item.ID.ToString());
@@ -74,11 +70,7 @@ namespace WindowsFormsApp1.Forms
         //Метод оновлення відображення даних у списку родичів
         public void UpdateRelativesList(Prisoner prisoner)
         {
-            foreach (var item in listViewRelatives.Items)
-            {
-                listViewRelatives.Items.Remove((ListViewItem)item);
-            }
-            
+            listViewRelatives.Items.Clear();
             foreach (var relative in prisoner.Relatives)
             {
                 ListViewItem lvi = new ListViewItem(relative.Name);
@@ -93,11 +85,7 @@ namespace WindowsFormsApp1.Forms
         //Метод оновлення відображення даних у списку рис характеру
         public void UpdateCharacterList(Prisoner prisoner)
         {
-            foreach (var item in listViewCharacter.Items)
-            {
-                listViewCharacter.Items.Remove((ListViewItem)item);
-            }
-            
+            listViewCharacter.Items.Clear();
             foreach (var character in prisoner.Character)
             {
                 ListViewItem lvi = new ListViewItem(character);
@@ -116,9 +104,11 @@ namespace WindowsFormsApp1.Forms
             textBoxAge.Text = prisoner.Age.ToString();
             textBoxBirth.Text = prisoner.BirthDate.ToShortDateString();
             textBoxID.Text = prisoner.ID.ToString();
-            textBoxRoomNumber.Text = prisoner.Room.Number.ToString();
-            textBoxRoomMax.Text = prisoner.Room.Max.ToString();
-            textBoxRoomFree.Text = prisoner.Room.Free.ToString();
+
+            var tempRoom = Global.Prison.Rooms.Find(r => r.Number == prisoner.RoomNumber);
+            textBoxRoomNumber.Text = tempRoom.Number.ToString();
+            textBoxRoomMax.Text = tempRoom.Max.ToString();
+            textBoxRoomFree.Text = tempRoom.Free.ToString();
             textBoxStateNumber.Text = prisoner.State.Number;
             textBoxStateGuardDate.Text = prisoner.State.GuardDate.ToShortDateString();
             textBoxStateReleaseDate.Text = prisoner.State.ReleaseDate.ToShortDateString();

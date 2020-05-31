@@ -6,8 +6,11 @@ namespace WindowsFormsApp1.Model
     [Serializable]
     public class Length
     {
+        //Кількість років
         public int Years { get; set; }
+        //Кількість місяців
         public int Months { get; set; }
+        //Кількість днів
         public int Days { get; set; }
         
         public Length(){}
