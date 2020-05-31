@@ -37,6 +37,10 @@ namespace WindowsFormsApp1.Model
                 tempRoom.Free--;
                 Prisoners.Add(prisoner);
             }
+            else
+            {
+                throw new ArgumentException();
+            }
         }
 
         //Видалення в'язня
